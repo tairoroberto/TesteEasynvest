@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="colorEditTextNormal" format="color"/>
+    <attr name="colorEditTextHighlighted" format="color"/>
+    <attr name="colorEditTextActivated" format="color"/>
+    <attr name="colorEditTextValid" format="color"/>
+    <attr name="colorEditTextInvalid" format="color"/>
+    <attr name="colorTextColorButton" format="color"/>
+    <attr name="colorTabLayoutBackground" format="color"/>
+    <attr name="colorTabLayoutHighlighted" format="color"/>
+    <attr name="colorTabLayoutText" format="color"/>
+</resources>
