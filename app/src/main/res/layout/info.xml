@@ -10,10 +10,10 @@
 
     <TextView
         android:id="@+id/name"
-        fontPath="fonts/DINPro-Regular.otf"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="6"
+        android:fontFamily="@font/DINPro_Regular"
         android:textColor="@color/title_info"
         android:textSize="14sp"/>
 
@@ -25,9 +25,9 @@
 
     <TextView
         android:id="@+id/data"
-        fontPath="fonts/DINPro-Regular.otf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/DINPro_Regular"
         android:gravity="right"
         android:textSize="14sp"/>
 </LinearLayout>
