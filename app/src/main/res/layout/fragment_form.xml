@@ -19,6 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/margin"
             android:layout_marginTop="@dimen/margin"
+            android:fontFamily="@font/DINPro_Medium"
             android:gravity="center"
             android:text="@string/fragment_form_title"
             android:textColor="@color/title"

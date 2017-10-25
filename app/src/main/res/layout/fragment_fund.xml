@@ -25,6 +25,7 @@
                 android:layout_centerInParent="true"
                 android:layout_marginBottom="@dimen/margin"
                 android:layout_marginTop="@dimen/margin"
+                android:fontFamily="@font/DINPro_Medium"
                 android:gravity="center"
                 android:text="@string/fragment_fund_title"
                 android:textColor="@color/title"
@@ -44,6 +45,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin"
+            android:fontFamily="@font/DINPro_Medium"
             android:gravity="center"
             android:textColor="@color/fund_title"
             android:textSize="14sp"/>
@@ -52,6 +54,7 @@
             android:id="@+id/fund_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/DINPro_Bold"
             android:gravity="center"
             android:textColor="@color/title"
             android:textSize="26sp"/>
@@ -67,6 +70,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin"
+            android:fontFamily="@font/DINPro_Bold"
             android:gravity="center"
             android:textColor="@color/fund_title"
             android:textSize="16sp"/>
@@ -75,6 +79,7 @@
             android:id="@+id/definition"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/DINPro_Medium"
             android:gravity="center"
             android:textColor="@color/fund_title"
             android:textSize="16sp"/>
@@ -92,6 +97,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/margin"
             android:layout_marginTop="@dimen/margin"
+            android:fontFamily="@font/DINPro_Medium"
             android:gravity="center"
             android:textColor="@color/text_highlighted"
             android:textSize="16sp"/>
@@ -112,6 +118,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/margin"
             android:layout_marginTop="@dimen/margin"
+            android:fontFamily="@font/DINPro_Medium"
             android:gravity="center"
             android:text="@string/more_info_about_this_investment"
             android:textColor="@color/text_highlighted"
@@ -132,6 +139,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
+                android:fontFamily="@font/DINPro_Regular"
                 android:gravity="right"
                 android:text="@string/fund"
                 android:textColor="@color/title_info"
@@ -141,6 +149,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
+                android:fontFamily="@font/DINPro_Regular"
                 android:gravity="right"
                 android:text="@string/cdi"
                 android:textColor="@color/title_info"
@@ -157,6 +166,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
+                android:fontFamily="@font/DINPro_Regular"
                 android:text="@string/in_month"
                 android:textColor="@color/title_info"
                 android:textSize="14sp"/>
@@ -166,6 +176,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
+                android:fontFamily="@font/DINPro_Regular"
                 android:gravity="right"
                 android:textColor="@color/title"
                 android:textSize="14sp"/>
@@ -175,6 +186,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
+                android:fontFamily="@font/DINPro_Regular"
                 android:gravity="right"
                 android:textColor="@color/title"
                 android:textSize="14sp"/>
@@ -190,6 +202,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
+                android:fontFamily="@font/DINPro_Regular"
                 android:text="@string/in_year"
                 android:textColor="@color/title_info"
                 android:textSize="14sp"/>
@@ -199,6 +212,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
+                android:fontFamily="@font/DINPro_Regular"
                 android:gravity="right"
                 android:textColor="@color/title"
                 android:textSize="14sp"/>
@@ -208,6 +222,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
+                android:fontFamily="@font/DINPro_Regular"
                 android:gravity="right"
                 android:textColor="@color/title"
                 android:textSize="14sp"/>
@@ -224,6 +239,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
+                android:fontFamily="@font/DINPro_Regular"
                 android:text="@string/in_12_months"
                 android:textColor="@color/title_info"
                 android:textSize="14sp"/>
@@ -233,6 +249,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
+                android:fontFamily="@font/DINPro_Regular"
                 android:gravity="right"
                 android:textColor="@color/title"
                 android:textSize="14sp"/>
@@ -242,6 +259,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
+                android:fontFamily="@font/DINPro_Regular"
                 android:gravity="right"
                 android:textColor="@color/title"
                 android:textSize="14sp"/>
