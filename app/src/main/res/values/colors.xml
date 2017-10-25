@@ -3,4 +3,27 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="editTextNormal">#acacac</color>
+    <color name="editTextHighlighted">#acacac</color>
+    <color name="editTextActivated">#acacac</color>
+    <color name="editTextValid">#65be30</color>
+    <color name="editTextInvalid">#ff1f1f</color>
+    <color name="colorButton">#4d92df</color>
+    <color name="textColorButton">#ffffff</color>
+    <color name="risk_1">#74da62</color>
+    <color name="risk_2">#4bc06c</color>
+    <color name="risk_3">#ffc00f</color>
+    <color name="risk_4">#ff742b</color>
+    <color name="risk_5">#ff3634</color>
+    <color name="title">#333333</color>
+    <color name="fund_title">#7E7E7E</color>
+    <color name="divider">#EFEEED</color>
+    <color name="text_highlighted">#4990E2</color>
+    <color name="title_info">#acacac</color>
+    <color name="fund_chart_line">#4d408b</color>
+    <color name="cdi_chart_line">#00c9b3</color>
+    <color name="tabLayoutHighlighted">#F6A623</color>
+    <color name="tabLayoutText">#FFFFFF</color>
 </resources>
