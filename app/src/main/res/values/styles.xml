@@ -6,6 +6,16 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/windowBackground</item>
+        <item name="colorEditTextNormal">@color/editTextNormal</item>
+        <item name="colorEditTextHighlighted">@color/editTextHighlighted</item>
+        <item name="colorEditTextActivated">@color/editTextActivated</item>
+        <item name="colorEditTextValid">@color/editTextValid</item>
+        <item name="colorEditTextInvalid">@color/editTextInvalid</item>
+        <item name="colorTextColorButton">@color/textColorButton</item>
+        <item name="colorTabLayoutBackground">@color/colorAccent</item>
+        <item name="colorTabLayoutHighlighted">@color/tabLayoutHighlighted</item>
+        <item name="colorTabLayoutText">@color/tabLayoutText</item>
     </style>
 
     <style name="EditTextStyle" parent="Theme.AppCompat.Light.NoActionBar">
