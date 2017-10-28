@@ -11,7 +11,7 @@ import br.com.tairoroberto.testeeasynvest.domain.Cell
 class CustomImageView internal constructor(parent: ViewGroup?, cell: Cell) : ViewHandler<ImageView>(parent, cell) {
 
     override val layoutId: Int
-        get() = R.layout.image_view
+        get() = R.layout.custom_imageview
 
     override fun init(view: ImageView) {
         Glide.with(view.context)

@@ -9,7 +9,7 @@ import br.com.tairoroberto.testeeasynvest.domain.Cell
 class CustomTextView internal constructor(parent: ViewGroup?, cell: Cell) : ViewHandler<TextView>(parent, cell) {
 
     override val layoutId: Int
-        get() = R.layout.text_view
+        get() = R.layout.custom_textview
 
     override fun init(view: TextView) {
         view.text = cell.message

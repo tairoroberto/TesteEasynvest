@@ -9,7 +9,7 @@ import br.com.tairoroberto.testeeasynvest.domain.Cell
 class CustomCheckbox internal constructor(parent: ViewGroup?, cell: Cell) : ViewHandler<CheckBox>(parent, cell) {
 
     override val layoutId: Int
-        get() = R.layout.checkbox
+        get() = R.layout.custom_checkbox
 
     override fun init(view: CheckBox) {
         view.text = cell.message

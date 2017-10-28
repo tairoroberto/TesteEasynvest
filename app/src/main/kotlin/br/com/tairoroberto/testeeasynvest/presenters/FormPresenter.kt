@@ -44,18 +44,17 @@ class FormPresenter(private val repository: CellRepository) {
             val observable = repository.list()
 
             if (io != null && mainThread != null) {
-                observable.subscribeOn(io)
-                        .observeOn(mainThread)
+                observable.subscribeOn(io).observeOn(mainThread)
             }
 
             disposable = observable
                     .subscribe({ cells ->
                         if (view != null) {
-                            view!!.setCells(cells)
+                            view?.setCells(cells)
                         }
                     }) { throwable ->
                         if (view != null) {
-                            view!!.displayError(throwable)
+                            view?.displayError(throwable)
                         }
                     }
         }

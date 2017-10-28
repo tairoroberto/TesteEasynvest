@@ -101,7 +101,7 @@ public class InvestmentFragment extends Fragment implements FundView {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_fund, container, false);
+        View view = inflater.inflate(R.layout.fragment_investment, container, false);
 
         content = view.findViewById(R.id.content);
         title = view.findViewById(R.id.title);

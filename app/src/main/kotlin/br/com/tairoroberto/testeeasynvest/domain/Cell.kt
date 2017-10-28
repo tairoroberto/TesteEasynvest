@@ -1,63 +1,65 @@
 package br.com.tairoroberto.testeeasynvest.domain
 
+import android.os.Parcel
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 
-import java.io.Serializable
 
+data class Cell(@SerializedName("id")
+                var id: Int = 0,
 
-class Cell : Serializable {
+                @SerializedName("type")
+                var type: CellType? = null,
 
-    var id: Int = 0
+                @SerializedName("message")
+                var message: String? = null,
 
-    var type: CellType? = null
+                @SerializedName("typefield")
+                var typeField: TypeField? = null,
 
-    var message: String? = null
+                @SerializedName("hidden")
+                var isHidden: Boolean = false,
 
-    @SerializedName("typefield")
-    var typeField: TypeField? = null
+                @SerializedName("topSpacing")
+                var topSpacing: Double = 0.toDouble(),
 
-    var isHidden: Boolean = false
+                @SerializedName("show")
+                var show: Int? = null,
 
-    var topSpacing: Double = 0.toDouble()
+                @SerializedName("required")
+                var isRequired: Boolean = false) : Parcelable {
 
-    var show: Int? = null
+    constructor(source: Parcel) : this(
+            source.readInt(),
+            source.readValue(Int::class.java.classLoader)?.let { CellType.values()[it as Int] },
+            source.readString(),
+            source.readValue(Int::class.java.classLoader)?.let { TypeField.values()[it as Int] },
+            1 == source.readInt(),
+            source.readDouble(),
+            source.readValue(Int::class.java.classLoader) as Int?,
+            1 == source.readInt()
+    )
 
-    var isRequired: Boolean = false
+    override fun describeContents() = 0
 
-    constructor()
-
-    constructor(type: CellType) {
-        this.type = type
+    override fun writeToParcel(dest: Parcel, flags: Int) = with(dest) {
+        writeInt(id)
+        writeValue(type?.ordinal)
+        writeString(message)
+        writeValue(typeField?.ordinal)
+        writeInt((if (isHidden) 1 else 0))
+        writeDouble(topSpacing)
+        writeValue(show)
+        writeInt((if (isRequired) 1 else 0))
     }
 
-    override fun equals(o: Any?): Boolean {
-        if (this === o) return true
-        if (o == null || javaClass != o.javaClass) return false
+    companion object {
 
-        val cell = o as Cell?
-
-        if (id != cell?.id) return false
-        if (isHidden != cell.isHidden) return false
-        if (java.lang.Double.compare(cell.topSpacing, topSpacing) != 0) return false
-        if (isRequired != cell.isRequired) return false
-        if (type != cell.type) return false
-        if (if (message != null) message != cell.message else cell.message != null) return false
-        if (typeField !== cell.typeField) return false
-        return if (show != null) show == cell.show else cell.show == null
-
-    }
-
-    override fun hashCode(): Int {
-        var result: Int = id
-        val temp: Long = java.lang.Double.doubleToLongBits(topSpacing)
-        result = 31 * result + if (type != null) type?.hashCode() as Int else 0
-        result = 31 * result + if (message != null) message?.hashCode() as Int else 0
-        result = 31 * result + if (typeField != null) typeField?.hashCode() as Int else 0
-        result = 31 * result + if (isHidden) 1 else 0
-        result = 31 * result + (temp xor temp.ushr(32)).toInt()
-        result = 31 * result + if (show != null) show?.hashCode() as Int else 0
-        result = 31 * result + if (isRequired) 1 else 0
-        return result
+        @JvmField
+        val CREATOR: Parcelable.Creator<Cell> = object : Parcelable.Creator<Cell> {
+            override fun createFromParcel(source: Parcel): Cell = Cell(source)
+            override fun newArray(size: Int): Array<Cell?> = arrayOfNulls(size)
+        }
     }
 
     override fun toString(): String {

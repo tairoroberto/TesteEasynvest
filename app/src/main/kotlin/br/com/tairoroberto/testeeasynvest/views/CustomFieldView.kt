@@ -1,6 +1,8 @@
 package br.com.tairoroberto.testeeasynvest.views
 
 import android.graphics.PorterDuff
+import android.support.design.widget.TextInputLayout
+import android.support.v4.content.ContextCompat
 import android.text.Editable
 import android.text.InputType
 import android.text.TextWatcher
@@ -12,22 +14,22 @@ import br.com.tairoroberto.testeeasynvest.extension.getAttr
 import com.vicmikhailau.maskededittext.MaskedEditText
 import java.util.regex.Pattern
 
-class CustomFieldView internal constructor(parent: ViewGroup?, cell: Cell) : ViewHandler<MaskedEditText>(parent, cell), TextWatcher {
+class CustomFieldView internal constructor(parent: ViewGroup?, cell: Cell) : ViewHandler<TextInputLayout>(parent, cell), TextWatcher {
 
     override val layoutId: Int
-        get() = R.layout.masked_edit_text
+        get() = R.layout.custom_edittext
 
-    override fun init(view: MaskedEditText) {
+    override fun init(view: TextInputLayout) {
         view.hint = cell.message
 
         if (cell.typeField != null) {
             when (cell.typeField) {
                 TypeField.TEL_NUMBER -> {
-                    view.setMask(TEL_MASK)
+                    (view.editText as MaskedEditText).setMask(MASK)
 
-                    view.inputType = InputType.TYPE_CLASS_PHONE
+                    view.editText?.inputType = InputType.TYPE_CLASS_PHONE
                 }
-                TypeField.TEXT -> view.inputType = InputType.TYPE_TEXT_FLAG_CAP_WORDS
+                TypeField.TEXT -> view.editText?.inputType = InputType.TYPE_TEXT_FLAG_CAP_WORDS
                 else -> {
 
                 }
@@ -35,7 +37,7 @@ class CustomFieldView internal constructor(parent: ViewGroup?, cell: Cell) : Vie
         }
 
         if (cell.isRequired) {
-            view.addTextChangedListener(this)
+            view.editText?.addTextChangedListener(this)
         }
     }
 
@@ -44,13 +46,13 @@ class CustomFieldView internal constructor(parent: ViewGroup?, cell: Cell) : Vie
     }
 
     override fun validate(): Boolean {
-        val text = view.text.toString().trim { it <= ' ' }
+        val text = view.editText?.text.toString().trim { it <= ' ' }
 
         var valid = !cell.isRequired
 
         if (!text.isEmpty()) {
             valid = when (cell.typeField) {
-                TypeField.TEL_NUMBER -> text.length >= TEL_MASK.length - 1
+                TypeField.TEL_NUMBER -> text.length >= MASK.length - 1
                 TypeField.EMAIL -> isValid(text)
                 else -> true
             }
@@ -58,9 +60,9 @@ class CustomFieldView internal constructor(parent: ViewGroup?, cell: Cell) : Vie
 
         val colorAttr = if (valid) R.attr.colorEditTextValid else R.attr.colorEditTextInvalid
 
-        val background = view.background
+        val background = view.editText?.background
 
-        background.setColorFilter(view.context.getAttr(colorAttr), PorterDuff.Mode.SRC_IN)
+        background?.setColorFilter(view.context.getAttr(colorAttr), PorterDuff.Mode.SRC_IN)
 
         return valid
     }
@@ -86,6 +88,6 @@ class CustomFieldView internal constructor(parent: ViewGroup?, cell: Cell) : Vie
 
     companion object {
 
-        private val TEL_MASK = "(##) #####-####"
+        private val MASK = "(##) #####-####"
     }
 }

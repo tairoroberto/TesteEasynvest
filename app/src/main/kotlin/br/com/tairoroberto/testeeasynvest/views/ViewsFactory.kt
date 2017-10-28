@@ -23,7 +23,7 @@ class ViewsFactory(private val parent: ViewGroup?) {
 
         val list = cells.map(factory::create)
 
-        Stream.of(list).forEach { viewHandler ->
+        list.forEach { viewHandler ->
             val cell = viewHandler?.cell
 
             if (cell?.show != null) {
