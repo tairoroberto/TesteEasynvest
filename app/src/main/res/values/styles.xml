@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -13,7 +13,7 @@
         <item name="colorEditTextValid">@color/editTextValid</item>
         <item name="colorEditTextInvalid">@color/editTextInvalid</item>
         <item name="colorTextColorButton">@color/textColorButton</item>
-        <item name="colorTabLayoutBackground">@color/colorAccent</item>
+        <item name="colorTabLayoutBackground">@color/tabBackgroundColor</item>
         <item name="colorTabLayoutHighlighted">@color/tabLayoutHighlighted</item>
         <item name="colorTabLayoutText">@color/tabLayoutText</item>
     </style>
@@ -35,5 +35,4 @@
         <item name="tabIndicatorColor">?attr/colorTabLayoutHighlighted</item>
         <item name="tabTextColor">?attr/colorTabLayoutText</item>
     </style>
-
 </resources>

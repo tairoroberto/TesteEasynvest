@@ -4,8 +4,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fillViewport="true"
-            android:paddingLeft="@dimen/margin"
-            android:paddingRight="@dimen/margin"
             android:scrollbars="none"
             tools:ignore="MissingPrefix">
 
@@ -13,7 +11,9 @@
         android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -25,7 +25,7 @@
                 android:layout_centerInParent="true"
                 android:layout_marginBottom="@dimen/margin"
                 android:layout_marginTop="@dimen/margin"
-                android:fontFamily="@font/din_pro_medium"
+                android:fontFamily="@font/din_pro_regular"
                 android:gravity="center"
                 android:text="@string/fragment_fund_title"
                 android:textColor="@color/title"
@@ -79,7 +79,7 @@
             android:id="@+id/definition"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/din_pro_medium"
+            android:fontFamily="@font/din_pro_light"
             android:gravity="center"
             android:textColor="@color/fund_title"
             android:textSize="16sp"/>
@@ -102,7 +102,7 @@
             android:textColor="@color/text_highlighted"
             android:textSize="16sp"/>
 
-        <br.com.ismael.easynvest.ui.ColoredProgressBar
+        <br.com.tairoroberto.testeeasynvest.ui.ColoredProgressBar
             android:id="@+id/risk"
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="match_parent"

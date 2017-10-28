@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/message_sent"
         android:layout_centerHorizontal="true"
-        android:fontFamily="@font/din_pro_medium"
+        android:fontFamily="@font/din_pro_light"
         android:text="@string/thanks"
         android:textColor="@color/fund_title"
         android:textSize="14sp"/>
@@ -36,7 +36,7 @@
         android:gravity="center"
         android:text="@string/message_sent"
         android:textColor="@color/title"
-        android:textSize="30sp"/>
+        android:textSize="28sp"/>
 
     <TextView
         android:id="@+id/send_message"
@@ -45,7 +45,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="60dp"
-        android:fontFamily="@font/din_pro_medium"
+        android:fontFamily="@font/din_pro_light"
         android:text="@string/send_message"
         android:textColor="@color/colorAccent"
         android:textSize="16sp"/>

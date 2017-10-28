@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
-
+    <color name="colorPrimary">#FF322A2A</color>
+    <color name="colorPrimaryDark">#FF303F9F</color>
+    <color name="colorAccent">#FF4990E2</color>
     <color name="windowBackground">#FFFFFF</color>
     <color name="editTextNormal">#acacac</color>
     <color name="editTextHighlighted">#acacac</color>
     <color name="editTextActivated">#acacac</color>
     <color name="editTextValid">#65be30</color>
     <color name="editTextInvalid">#ff1f1f</color>
-    <color name="colorButton">#4d92df</color>
-    <color name="textColorButton">#ffffff</color>
+    <color name="colorButton">#FF4990E2</color>
+    <color name="colorButtonNoPressed">#FF6DA1DF</color>
+    <color name="textColorButton">#FFFFFFFF</color>
     <color name="risk_1">#74da62</color>
     <color name="risk_2">#4bc06c</color>
     <color name="risk_3">#ffc00f</color>
@@ -24,6 +24,9 @@
     <color name="title_info">#acacac</color>
     <color name="fund_chart_line">#4d408b</color>
     <color name="cdi_chart_line">#00c9b3</color>
-    <color name="tabLayoutHighlighted">#F6A623</color>
+    <color name="tabLayoutHighlighted">#FFF6A623</color>
     <color name="tabLayoutText">#FFFFFF</color>
+    <color name="grey_FF979797">#FF979797</color>
+    <color name="grey_FFACACAC">#FFACACAC</color>
+    <color name="tabBackgroundColor">#FF4990E2</color>
 </resources>
