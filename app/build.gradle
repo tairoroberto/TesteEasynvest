@@ -40,7 +40,7 @@ android {
                             'build/generated/source/apt/${variant.dirName}']
 
             jniLibs.srcDirs = ['libs']
-            assets.srcDirs = ['src/main/assets']
+            assets.srcDirs = ['src/main/assets', 'src/main/assets/']
         }
     }
 
