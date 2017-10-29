@@ -5,10 +5,10 @@ import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 
 data class FundContainer(@SerializedName("screen")
-                         var fund: Fund? = null) : Parcelable {
+                         var fund: Investment? = null) : Parcelable {
 
 
-    constructor(parcel: Parcel) : this(parcel.readParcelable<Fund>(Fund::class.java.classLoader))
+    constructor(parcel: Parcel) : this(parcel.readParcelable<Investment>(Investment::class.java.classLoader))
 
     override fun toString(): String {
         return "FundContainer{" +

@@ -116,9 +116,7 @@ public class FormFragment extends Fragment implements FormView {
                             .filter(b -> !b)
                             .findFirst();
 
-                    optional.ifPresentOrElse(
-                            b -> {
-                            },
+                    optional.ifPresentOrElse(b -> {},
                             () -> {
                                 MainActivity activity = (MainActivity) getActivity();
 

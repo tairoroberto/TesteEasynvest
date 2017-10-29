@@ -1,7 +1,7 @@
 package br.com.tairoroberto.testeeasynvest.repositories
 
 import android.content.res.AssetManager
-import br.com.tairoroberto.testeeasynvest.domain.Fund
+import br.com.tairoroberto.testeeasynvest.domain.Investment
 import br.com.tairoroberto.testeeasynvest.domain.FundContainer
 import com.google.gson.Gson
 import io.reactivex.Observable
@@ -11,7 +11,7 @@ import java.nio.charset.Charset
 
 class FundRepositoryImpl(assetManager: AssetManager, gson: Gson) : AbstractAssetRepository(assetManager, gson), FundRepository {
 
-    override fun getFund(): Observable<Fund> {
+    override fun getFund(): Observable<Investment> {
         var `in`: InputStream? = null
 
         return try {

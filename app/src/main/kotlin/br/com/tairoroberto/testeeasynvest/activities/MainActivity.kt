@@ -2,11 +2,9 @@ package br.com.tairoroberto.testeeasynvest.activities
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.widget.LinearLayout
 import br.com.tairoroberto.testeeasynvest.R
 import kotlinx.android.synthetic.main.activity_main.*
-import android.support.v4.view.ViewCompat.setRotationX
-import android.widget.LinearLayout
-
 
 
 class MainActivity : AppCompatActivity() {
@@ -19,7 +17,8 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
 
-        view_pager.adapter = MainAdapter(this, supportFragmentManager)
+        adapter = MainAdapter(this, supportFragmentManager)
+        view_pager.adapter = adapter
 
         tab_layout.setupWithViewPager(view_pager)
 

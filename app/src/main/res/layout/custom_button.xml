@@ -4,4 +4,7 @@
     android:background="@drawable/button_background"
     android:layout_width="match_parent"
     android:textColor="@color/textColorButton"
-    android:layout_height="wrap_content"/>
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="30dp"
+    android:layout_marginStart="@dimen/margin"
+    android:layout_marginEnd="@dimen/margin"/>

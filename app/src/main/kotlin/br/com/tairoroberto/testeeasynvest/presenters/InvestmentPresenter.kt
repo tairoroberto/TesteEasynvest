@@ -3,13 +3,13 @@ package br.com.tairoroberto.testeeasynvest.presenters
 import br.com.tairoroberto.testeeasynvest.qualifiers.IO
 import br.com.tairoroberto.testeeasynvest.qualifiers.MainThread
 import br.com.tairoroberto.testeeasynvest.repositories.FundRepository
-import br.com.tairoroberto.testeeasynvest.views.FundView
+import br.com.tairoroberto.testeeasynvest.views.InvestmentView
 import io.reactivex.Scheduler
 import io.reactivex.disposables.Disposable
 import javax.inject.Inject
 
 
-class FundPresenter(private val repository: FundRepository) {
+class InvestmentPresenter(private val repository: FundRepository) {
 
     private var io: Scheduler? = null
 
@@ -17,7 +17,7 @@ class FundPresenter(private val repository: FundRepository) {
 
     private var disposable: Disposable? = null
 
-    private var view: FundView? = null
+    private var view: InvestmentView? = null
 
     @Inject
     constructor(repository: FundRepository, @IO io: Scheduler, @MainThread mainThread: Scheduler) : this(repository) {
@@ -28,7 +28,7 @@ class FundPresenter(private val repository: FundRepository) {
     }
 
 
-    fun attachView(view: FundView) {
+    fun attachView(view: InvestmentView) {
         this.view = view
     }
 
@@ -51,7 +51,7 @@ class FundPresenter(private val repository: FundRepository) {
         disposable = observable
                 .subscribe { fund ->
                     if (view != null) {
-                        view!!.setFund(fund)
+                        view?.setFund(fund)
                     }
                 }
     }

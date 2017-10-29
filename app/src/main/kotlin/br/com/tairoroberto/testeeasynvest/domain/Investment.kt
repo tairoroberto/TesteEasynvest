@@ -3,27 +3,27 @@ package br.com.tairoroberto.testeeasynvest.domain
 import android.os.Parcel
 import android.os.Parcelable
 
-class Fund(var title: String? = null,
+class Investment(var title: String? = null,
 
-           var fundName: String? = null,
+                 var fundName: String? = null,
 
-           var whatIs: String? = null,
+                 var whatIs: String? = null,
 
-           var definition: String? = null,
+                 var definition: String? = null,
 
-           var graph: Graph? = null,
+                 var graph: Graph? = null,
 
-           var riskTitle: String? = null,
+                 var riskTitle: String? = null,
 
-           var risk: Int = 0,
+                 var risk: Int = 0,
 
-           var infoTitle: String? = null,
+                 var infoTitle: String? = null,
 
-           var moreInfo: MoreInfo? = null,
+                 var moreInfo: MoreInfo? = null,
 
-           var info: List<Info>? = null,
+                 var info: List<Info>? = null,
 
-           var downInfo: List<Info>? = null) : Parcelable {
+                 var downInfo: List<Info>? = null) : Parcelable {
 
     override fun toString(): String {
         return "Fund{" +
@@ -73,9 +73,9 @@ class Fund(var title: String? = null,
 
     companion object {
         @JvmField
-        val CREATOR: Parcelable.Creator<Fund> = object : Parcelable.Creator<Fund> {
-            override fun createFromParcel(source: Parcel): Fund = Fund(source)
-            override fun newArray(size: Int): Array<Fund?> = arrayOfNulls(size)
+        val CREATOR: Parcelable.Creator<Investment> = object : Parcelable.Creator<Investment> {
+            override fun createFromParcel(source: Parcel): Investment = Investment(source)
+            override fun newArray(size: Int): Array<Investment?> = arrayOfNulls(size)
         }
     }
 }

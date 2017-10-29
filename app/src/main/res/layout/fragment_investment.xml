@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fillViewport="true"
-            android:scrollbars="none"
-            tools:ignore="MissingPrefix">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    tools:ignore="MissingPrefix">
 
     <LinearLayout
         android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp">
+        android:layout_marginStart="16dp"
+        android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -29,7 +29,7 @@
                 android:gravity="center"
                 android:text="@string/fragment_fund_title"
                 android:textColor="@color/title"
-                android:textSize="16sp"/>
+                android:textSize="16sp" />
 
             <ImageView
                 android:id="@+id/share_icon"
@@ -37,7 +37,7 @@
                 android:layout_height="20dp"
                 android:layout_alignParentRight="true"
                 android:layout_marginBottom="@dimen/margin"
-                android:layout_marginTop="@dimen/margin"/>
+                android:layout_marginTop="@dimen/margin" />
         </RelativeLayout>
 
         <TextView
@@ -48,7 +48,7 @@
             android:fontFamily="@font/din_pro_medium"
             android:gravity="center"
             android:textColor="@color/fund_title"
-            android:textSize="14sp"/>
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/fund_name"
@@ -57,13 +57,13 @@
             android:fontFamily="@font/din_pro_bold"
             android:gravity="center"
             android:textColor="@color/title"
-            android:textSize="26sp"/>
+            android:textSize="26sp" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginTop="@dimen/margin"
-            android:background="@color/divider"/>
+            android:background="@color/divider" />
 
         <TextView
             android:id="@+id/what_is"
@@ -73,7 +73,7 @@
             android:fontFamily="@font/din_pro_bold"
             android:gravity="center"
             android:textColor="@color/fund_title"
-            android:textSize="16sp"/>
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/definition"
@@ -82,14 +82,13 @@
             android:fontFamily="@font/din_pro_light"
             android:gravity="center"
             android:textColor="@color/fund_title"
-            android:textSize="16sp"/>
+            android:textSize="16sp" />
 
         <com.github.mikephil.charting.charts.LineChart
             android:id="@+id/line_chart"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:layout_marginTop="@dimen/margin_2x">
-        </com.github.mikephil.charting.charts.LineChart>
+            android:layout_marginTop="@dimen/margin_2x"/>
 
         <TextView
             android:id="@+id/risk_title"
@@ -99,19 +98,78 @@
             android:layout_marginTop="@dimen/margin"
             android:fontFamily="@font/din_pro_medium"
             android:gravity="center"
+            android:textAlignment="center"
             android:textColor="@color/text_highlighted"
-            android:textSize="16sp"/>
+            android:textSize="16sp" />
 
-        <br.com.tairoroberto.testeeasynvest.ui.ColoredProgressBar
-            android:id="@+id/risk"
-            style="?android:attr/progressBarStyleHorizontal"
+        <LinearLayout
+            android:id="@+id/riskContent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/margin"
+            android:layout_marginEnd="38dp"
+            android:layout_marginStart="38dp"
             android:layout_marginTop="@dimen/margin"
-            android:indeterminate="false"
-            android:max="100"
-            android:progress="0"/>
+            android:orientation="horizontal"
+            android:paddingEnd="1dp"
+            android:paddingStart="1dp"
+            android:gravity="bottom">
+
+            <LinearLayout
+                android:id="@+id/risk_1"
+                android:layout_width="0dp"
+                android:layout_height="6dp"
+                android:layout_weight="1"
+                android:background="#FF74DA61"
+                android:orientation="vertical"
+                android:layout_marginEnd="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginRight="1dp" />
+
+            <LinearLayout
+                android:id="@+id/risk_2"
+                android:layout_width="0dp"
+                android:layout_height="6dp"
+                android:layout_weight="1"
+                android:background="#FF4AC16C"
+                android:orientation="vertical"
+                android:layout_marginEnd="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginRight="1dp"/>
+
+            <LinearLayout
+                android:id="@+id/risk_3"
+                android:layout_width="60dp"
+                android:layout_height="6dp"
+                android:background="#FFFFC010"
+                android:orientation="vertical"
+                android:layout_marginEnd="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginRight="1dp"/>
+
+            <LinearLayout
+                android:id="@+id/risk_4"
+                android:layout_width="0dp"
+                android:layout_height="6dp"
+                android:layout_weight="1"
+                android:background="#FFFF742C"
+                android:orientation="vertical"
+                android:layout_marginEnd="1dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginRight="1dp"/>
+
+            <LinearLayout
+                android:id="@+id/risk_5"
+                android:layout_width="0dp"
+                android:layout_height="6dp"
+                android:layout_weight="1"
+                android:background="#FFFF3634"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginRight="1dp"
+                android:orientation="vertical" />
+
+        </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
@@ -122,7 +180,7 @@
             android:gravity="center"
             android:text="@string/more_info_about_this_investment"
             android:textColor="@color/text_highlighted"
-            android:textSize="16sp"/>
+            android:textSize="16sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -133,7 +191,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="4"/>
+                android:layout_weight="4" />
 
             <TextView
                 android:layout_width="0dp"
@@ -143,7 +201,7 @@
                 android:gravity="right"
                 android:text="@string/fund"
                 android:textColor="@color/title_info"
-                android:textSize="14sp"/>
+                android:textSize="14sp" />
 
             <TextView
                 android:layout_width="0dp"
@@ -153,7 +211,7 @@
                 android:gravity="right"
                 android:text="@string/cdi"
                 android:textColor="@color/title_info"
-                android:textSize="14sp"/>
+                android:textSize="14sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -169,7 +227,7 @@
                 android:fontFamily="@font/din_pro_regular"
                 android:text="@string/in_month"
                 android:textColor="@color/title_info"
-                android:textSize="14sp"/>
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/fund_in_month"
@@ -179,7 +237,7 @@
                 android:fontFamily="@font/din_pro_regular"
                 android:gravity="right"
                 android:textColor="@color/title"
-                android:textSize="14sp"/>
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/cdi_in_month"
@@ -189,7 +247,7 @@
                 android:fontFamily="@font/din_pro_regular"
                 android:gravity="right"
                 android:textColor="@color/title"
-                android:textSize="14sp"/>
+                android:textSize="14sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -205,7 +263,7 @@
                 android:fontFamily="@font/din_pro_regular"
                 android:text="@string/in_year"
                 android:textColor="@color/title_info"
-                android:textSize="14sp"/>
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/fund_in_year"
@@ -215,7 +273,7 @@
                 android:fontFamily="@font/din_pro_regular"
                 android:gravity="right"
                 android:textColor="@color/title"
-                android:textSize="14sp"/>
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/cdi_in_year"
@@ -225,7 +283,7 @@
                 android:fontFamily="@font/din_pro_regular"
                 android:gravity="right"
                 android:textColor="@color/title"
-                android:textSize="14sp"/>
+                android:textSize="14sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -242,7 +300,7 @@
                 android:fontFamily="@font/din_pro_regular"
                 android:text="@string/in_12_months"
                 android:textColor="@color/title_info"
-                android:textSize="14sp"/>
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/fund_in_12_months"
@@ -252,7 +310,7 @@
                 android:fontFamily="@font/din_pro_regular"
                 android:gravity="right"
                 android:textColor="@color/title"
-                android:textSize="14sp"/>
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/cdi_in_12_months"
@@ -262,7 +320,7 @@
                 android:fontFamily="@font/din_pro_regular"
                 android:gravity="right"
                 android:textColor="@color/title"
-                android:textSize="14sp"/>
+                android:textSize="14sp" />
         </LinearLayout>
 
         <View
@@ -270,7 +328,7 @@
             android:layout_height="1dp"
             android:layout_marginBottom="@dimen/margin"
             android:layout_marginTop="@dimen/margin"
-            android:background="@color/divider"/>
+            android:background="@color/divider" />
     </LinearLayout>
 
 </ScrollView>
