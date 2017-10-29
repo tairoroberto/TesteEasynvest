@@ -8,7 +8,7 @@ import br.com.tairoroberto.testeeasynvest.domain.Cell
 
 class CustomCheckbox internal constructor(parent: ViewGroup?, cell: Cell) : ViewHandler<CheckBox>(parent, cell) {
 
-    override val layoutId: Int
+    public override val layoutId: Int
         get() = R.layout.custom_checkbox
 
     override fun init(view: CheckBox) {

@@ -2,7 +2,6 @@ package br.com.tairoroberto.testeeasynvest.views
 
 import android.graphics.PorterDuff
 import android.support.design.widget.TextInputLayout
-import android.support.v4.content.ContextCompat
 import android.text.Editable
 import android.text.InputType
 import android.text.TextWatcher
@@ -16,7 +15,7 @@ import java.util.regex.Pattern
 
 class CustomFieldView internal constructor(parent: ViewGroup?, cell: Cell) : ViewHandler<TextInputLayout>(parent, cell), TextWatcher {
 
-    override val layoutId: Int
+    public override val layoutId: Int
         get() = R.layout.custom_edittext
 
     override fun init(view: TextInputLayout) {
