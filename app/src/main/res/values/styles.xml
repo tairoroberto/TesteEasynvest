@@ -1,11 +1,38 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/windowBackground</item>
+        <item name="colorEditTextNormal">@color/editTextNormal</item>
+        <item name="colorEditTextHighlighted">@color/editTextHighlighted</item>
+        <item name="colorEditTextActivated">@color/editTextActivated</item>
+        <item name="colorEditTextValid">@color/editTextValid</item>
+        <item name="colorEditTextInvalid">@color/editTextInvalid</item>
+        <item name="colorTextColorButton">@color/textColorButton</item>
+        <item name="colorTabLayoutBackground">@color/tabBackgroundColor</item>
+        <item name="colorTabLayoutHighlighted">@color/tabLayoutHighlighted</item>
+        <item name="colorTabLayoutText">@color/tabLayoutText</item>
     </style>
 
+    <style name="EditTextStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorControlNormal">?attr/colorEditTextNormal</item>
+        <item name="colorControlActivated">?attr/colorEditTextActivated</item>
+        <item name="colorControlHighlight">?attr/colorEditTextHighlighted</item>
+    </style>
+
+    <style name="ButtonStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:background">@drawable/button_background</item>
+        <item name="android:textColor">?attr/colorTextColorButton</item>
+    </style>
+
+    <style name="TabLayoutStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:background">?attr/colorTabLayoutBackground</item>
+        <item name="tabSelectedTextColor">?attr/colorTabLayoutHighlighted</item>
+        <item name="tabIndicatorColor">?attr/colorTabLayoutHighlighted</item>
+        <item name="tabTextColor">?attr/colorTabLayoutText</item>
+    </style>
 </resources>

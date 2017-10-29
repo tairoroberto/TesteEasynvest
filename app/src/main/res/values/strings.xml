@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Teste Easynvest</string>
+
+    <string name="fragment_investment">Investimento</string>
+    <string name="fragment_contact">Contato</string>
+    <string name="thanks">Obrigado!</string>
+    <string name="message_sent">Mensagem enviada com sucesso :)</string>
+    <string name="send_message">Enviar nova mensagem</string>
+    <string name="in_month">No mês</string>
+    <string name="in_year">No ano</string>
+    <string name="in_12_months">12 meses</string>
+    <string name="fund">Fundo</string>
+    <string name="cdi">CDI</string>
+    <string name="fragment_fund_title">Investimento</string>
+    <string name="fragment_form_title">Contato</string>
+    <string name="more_info_about_this_investment">Mais informações sobre o investimento</string>
+    <string name="download">Baixar</string>
+    <string name="investment">Investir</string>
 </resources>
