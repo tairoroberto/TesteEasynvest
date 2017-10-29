@@ -16,4 +16,8 @@
     <string name="more_info_about_this_investment">Mais informações sobre o investimento</string>
     <string name="download">Baixar</string>
     <string name="investment">Investir</string>
+    <string name="yes">sim</string>
+    <string name="not">não</string>
+    <string name="rational_permission">Pernissões são necessárias para salvar imagens :)</string>
+    <string name="atention">Atenção</string>
 </resources>
