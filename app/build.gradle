@@ -111,6 +111,10 @@ dependencies {
     })
     androidTestImplementation "com.android.support.test:runner:${rootProject.runner}"
     implementation "com.android.support.test.espresso:espresso-idling-resource:${rootProject.espresso}"
-    testImplementation "org.mockito:mockito-core:${rootProject.mockito}"
+    testImplementation 'org.mockito:mockito-inline:2.8.9'
+    testImplementation('com.nhaarman:mockito-kotlin:1.5.0') {
+        exclude group: 'org.jetbrains.kotlin'
+        exclude group: 'org.mockito'
+    }
     testImplementation "org.robolectric:robolectric:${rootProject.robolectric}"
 }

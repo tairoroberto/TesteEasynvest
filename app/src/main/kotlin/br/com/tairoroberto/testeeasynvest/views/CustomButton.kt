@@ -9,7 +9,7 @@ import br.com.tairoroberto.testeeasynvest.domain.Cell
 
 class CustomButton internal constructor(parent: ViewGroup?, cell: Cell) : ViewHandler<Button>(parent, cell) {
 
-    override val layoutId: Int
+    public override val layoutId: Int
         get() = R.layout.custom_button
 
     override fun init(view: Button) {

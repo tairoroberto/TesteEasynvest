@@ -11,17 +11,17 @@ import br.com.tairoroberto.testeeasynvest.extension.dpTopx
 abstract class ViewHandler<T : View> internal constructor(parent: ViewGroup?, cell: Cell) {
 
     var cell: Cell
-        protected set
+        set
 
     var view: T
-        protected set
+        set
 
     val id: Int
         get() = cell.id
 
     var isVisible: Boolean
         get() = view.visibility == View.VISIBLE
-        internal set(visible) {
+        set(visible) {
             view.visibility = if (visible) View.VISIBLE else View.GONE
         }
 
